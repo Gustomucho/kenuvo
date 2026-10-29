@@ -1,0 +1,34 @@
+name: Review reference data
+on:
+  schedule:
+    - cron: '20 8 10 * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: reference-data
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - run: npm run update:reference
+      - run: npm test
+      - name: Propose reviewed data update
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          if git diff --quiet -- data/reference.json && [ ! -f reports/reference-check.md ]; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git switch -C maintenance/reference-data
+          git add data/reference.json reports/reference-check.md
+          git commit -m 'Refresh mortgage reference and request source review'
+          git push --force-with-lease origin maintenance/reference-data
+          gh pr view maintenance/reference-data >/dev/null 2>&1 || gh pr create --base main --head maintenance/reference-data --title 'Review mortgage reference and renovation checks' --body-file reports/reference-check.md
