@@ -1,6 +1,6 @@
 # Raccorder kenuvo.be et connecter Google
 
-Domaine communiqué par le propriétaire : **kenuvo.be**. Le service se nomme **Kenuvo**, conformément au domaine acheté. Le dépôt conserve son adresse technique historique tant que son renommage dans les réglages GitHub n’est pas effectué.
+Domaine communiqué par le propriétaire : **kenuvo.be**. Le service se nomme **Kenuvo**, conformément au domaine acheté. Le dépôt a été renommé en `Gustomucho/kenuvo`.
 
 ## État constaté le 29 octobre 2026
 
@@ -20,11 +20,11 @@ Remplacer l'entrée A de la racine pointant vers `91.195.240.94` par quatre entr
 | A | vide | 185.199.111.153 |
 | CNAME | www | gustomucho.github.io |
 
-Ne pas mettre `https://` ou `/kevuno/` dans le CNAME. Ne pas ajouter de joker `*`. Ne pas supprimer les MX, TXT et autres réglages d'e-mail. Si un AAAA racine ou une entrée www conflictuelle est ajouté entre-temps, le vérifier avant de le remplacer. Ne pas changer les serveurs de noms : ceux constatés sont déjà chez Name.com.
+Ne pas mettre `https://` ou `/kenuvo/` dans le CNAME. Ne pas ajouter de joker `*`. Ne pas supprimer les MX, TXT et autres réglages d'e-mail. Si un AAAA racine ou une entrée www conflictuelle est ajouté entre-temps, le vérifier avant de le remplacer. Ne pas changer les serveurs de noms : ceux constatés sont déjà chez Name.com.
 
 ## 2. Dans GitHub
 
-Ouvrir le dépôt Gustomucho/kevuno → Settings → Pages → Custom domain → saisir `kenuvo.be` → Save. Ce réglage est nécessaire : un fichier CNAME dans le dépôt ne remplace pas cette configuration avec le workflow Actions.
+Ouvrir le dépôt Gustomucho/kenuvo → Settings → Pages → Custom domain → saisir `kenuvo.be` → Save. Ce réglage est nécessaire : un fichier CNAME dans le dépôt ne remplace pas cette configuration avec le workflow Actions.
 
 Attendre la validation DNS et le certificat, puis activer **Enforce HTTPS** quand l'option devient disponible. La propagation peut demander du temps ; ne pas effacer puis recréer les réglages en boucle. GitHub recommande de vérifier aussi la propriété du domaine dans les réglages Pages du compte, avec le TXT `_github-pages-challenge-Gustomucho` qu'il fournit. Garder ce TXT ensuite.
 
@@ -37,7 +37,7 @@ Contrôler après publication :
 - https://kenuvo.be/sitemap.xml ;
 - https://kenuvo.be/ads.txt (commentaire tant qu'AdSense n'est pas actif) ;
 - www et l'ancienne adresse GitHub redirigent vers le domaine retenu ;
-- canonical et hreflang utilisent le même domaine, sans `/kevuno/`.
+- canonical et hreflang utilisent le même domaine, sans `/kenuvo/`.
 
 Ces URL sont les cibles après raccordement, pas une confirmation qu'elles fonctionnent déjà. Ne pas soumettre le sitemap du nouveau domaine avant de vérifier qu'il est servi correctement.
 

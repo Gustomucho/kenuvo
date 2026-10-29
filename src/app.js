@@ -1,8 +1,9 @@
+import{experience}from'./experience.js';
 import{registerAgentTools}from'./webmcp.js';
 import{defaultScenario}from'./scenario.js';
 import{plain,fieldHints,summaryFigures}from'./plain-language.js';
 import{dictionaries,localeFor}from'./i18n.js';import{evaluate,renovation,priceCeiling,extractFacts,checkedNumber}from'./finance.js';
-for(const l of ['fr','nl','en'])Object.assign(dictionaries[l],plain[l]);
+for(const l of ['fr','nl','en'])Object.assign(dictionaries[l],plain[l],{start:experience[l].start,privacy:experience[l].formPrivacy});
 let lang=document.documentElement.lang,t=dictionaries[lang];const root=document.querySelector('#app'),ref=JSON.parse(document.querySelector('#reference').textContent),places=JSON.parse(document.querySelector('#places').textContent);
 const empty=()=>defaultScenario(ref);
 let state=empty(),step=0,variant=null,facts=null;const key='kevuno-project-v1';const money=n=>new Intl.NumberFormat(localeFor(lang),{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n),pct=n=>new Intl.NumberFormat(localeFor(lang),{style:'percent',maximumFractionDigits:1}).format(n);const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -44,10 +45,12 @@ function globals(){
  const scroll=()=>document.querySelector('#calculator').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches||document.documentElement.classList.contains('reduce-motion')?'instant':'smooth'});
  document.querySelector('[data-example]').onclick=()=>{example();scroll();};
  document.querySelector('[data-start]').onclick=scroll;
+ document.querySelectorAll('[data-calculator-step]').forEach(a=>a.onclick=e=>{e.preventDefault();step=Number(a.dataset.calculatorStep);render();scroll();});
+ document.querySelectorAll('a[href="#privacy"]').forEach(a=>a.onclick=()=>{document.querySelector('#privacy').open=true;});
  document.querySelector('[data-motion]').onchange=e=>document.documentElement.classList.toggle('reduce-motion',e.target.checked);
  document.querySelectorAll('[data-language]').forEach(a=>a.onclick=async e=>{e.preventDefault();await changeLanguage(a.href,true);});
 }
-async function changeLanguage(url,push){try{const target=new URL(url,location.href);if(target.origin!==location.origin)return;const response=await fetch(target.href);if(!response.ok)throw Error();const page=new DOMParser().parseFromString(await response.text(),'text/html'),next=page.documentElement.lang;if(!dictionaries[next])throw Error();for(const id of ['site-header','hero','guides','sources','site-footer','ad-slot','trust-strip','benefits','faq','agent-info','buyer-questions']){const old=document.getElementById(id),replacement=page.getElementById(id);if(old&&replacement)old.replaceWith(replacement);}lang=next;t=dictionaries[lang];document.documentElement.lang=lang;document.title=page.title;document.querySelector('.skip-link').textContent=page.querySelector('.skip-link').textContent;for(const selector of ['link[rel=canonical]','meta[name=description]','meta[property="og:title"]','meta[property="og:description"]','meta[property="og:url"]','meta[property="og:locale"]','script#identity-jsonld']){const current=document.head.querySelector(selector),replacement=page.head.querySelector(selector);if(current&&replacement)current.replaceWith(replacement);}if(push)history.pushState({},'',target.href);render();globals();}catch{msg('invalidFile');}}
+async function changeLanguage(url,push){try{const target=new URL(url,location.href);if(target.origin!==location.origin)return;const response=await fetch(target.href);if(!response.ok)throw Error();const page=new DOMParser().parseFromString(await response.text(),'text/html'),next=page.documentElement.lang;if(!dictionaries[next])throw Error();for(const id of ['site-header','hero','guides','sources','site-footer','ad-slot','trust-strip','benefits','faq','agent-info','buyer-questions','reassurance','buyer-scenes']){const old=document.getElementById(id),replacement=page.getElementById(id);if(old&&replacement)old.replaceWith(replacement);}lang=next;t=dictionaries[lang];document.documentElement.lang=lang;document.title=page.title;document.querySelector('.skip-link').textContent=page.querySelector('.skip-link').textContent;for(const selector of ['link[rel=canonical]','meta[name=description]','meta[property="og:title"]','meta[property="og:description"]','meta[property="og:url"]','meta[property="og:locale"]','script#identity-jsonld']){const current=document.head.querySelector(selector),replacement=page.head.querySelector(selector);if(current&&replacement)current.replaceWith(replacement);}if(push)history.pushState({},'',target.href);render();globals();}catch{msg('invalidFile');}}
 window.addEventListener('popstate',()=>changeLanguage(location.href,false));
 const entrySteps={budget:2,travaux:1,bilan:0};if(Object.hasOwn(entrySteps,location.hash.slice(1)))step=entrySteps[location.hash.slice(1)];
 render();globals();

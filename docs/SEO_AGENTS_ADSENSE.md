@@ -12,9 +12,9 @@ Canonical, hreflang FR/NL/EN, x-default, Open Graph, nom de marque, langue, site
 
 ## Limite du sous-dossier GitHub Pages
 
-Adresse actuelle : `https://gustomucho.github.io/kevuno/`.
+Adresse actuelle : `https://gustomucho.github.io/kenuvo/`.
 
-Les robots ne consultent que `https://gustomucho.github.io/robots.txt`, pas `/kevuno/robots.txt`. La copie produite sous le projet ne doit donc pas être présentée comme un contrôle effectif du domaine. `deployment/host-root/robots.txt` est préparé pour le véritable hébergement racine. Il autorise l'exploration et indique le sitemap. Une réponse 404 au robots racine ne bloque pas par elle-même l'exploration, mais il faut vérifier le robots réel en cas de changement d'hébergement.
+Les robots ne consultent que `https://gustomucho.github.io/robots.txt`, pas `/kenuvo/robots.txt`. La copie produite sous le projet ne doit donc pas être présentée comme un contrôle effectif du domaine. `deployment/host-root/robots.txt` est préparé pour le véritable hébergement racine. Il autorise l'exploration et indique le sitemap. Une réponse 404 au robots racine ne bloque pas par elle-même l'exploration, mais il faut vérifier le robots réel en cas de changement d'hébergement.
 
 Google ne prend pas en charge un nom de site distinct au niveau d'un sous-dossier. Le balisage renforce l'identité de Kenuvo, mais ne résout pas cette limite d'affichage de Google. Pour une marque durable et AdSense, utiliser un domaine propre dont la racine est maîtrisée. Aucun autre dépôt ou site existant de Gustomucho n'est modifié ici.
 
@@ -45,12 +45,12 @@ Le chargeur `src/advertising.js` est prêt à intégrer un identifiant réel et 
 
 Pour activer plus tard :
 
-1. Disposer d'un domaine admissible, idéalement un domaine propre à Kenuvo. L'URL d'inscription AdSense ne doit pas contenir de chemin tel que `/kevuno/`. Aucune admissibilité automatique de GitHub Pages ou approbation Google n'est affirmée.
+1. Disposer d'un domaine admissible, idéalement un domaine propre à Kenuvo. L'URL d'inscription AdSense ne doit pas contenir de chemin tel que `/kenuvo/`. Aucune admissibilité automatique de GitHub Pages ou approbation Google n'est affirmée.
 2. Créer le compte AdSense et faire valider le site ; récupérer le véritable identifiant `ca-pub-...` et un emplacement. Pour la vérification avant diffusion, utiliser la méthode fournie par Google sans activer les annonces prématurément.
 3. Intégrer une CMP certifiée Google adaptée au trafic belge/EEE, selon les règles alors applicables. Créer son adaptateur `requestAdPermission()` à partir du résultat réel du consentement, en prenant en compte refus, retrait, personnalisation et signaux requis. Ne pas remplacer la CMP par un simple bouton “J'accepte” ou une constante `true`.
 4. Compléter les mentions d'éditeur et la politique de confidentialité/cookies. Revoir les promesses actuelles d'absence de traceurs et les traitements des fournisseurs avant activation.
 5. Ajouter les origines exactes requises à la CSP des pages éditoriales selon les scripts officiels AdSense et CMP retenus. La CSP actuelle reste volontairement fermée aux scripts tiers : remplir les identifiants ne la desserre pas.
-6. Publier la ligne AdSense réelle dans `/ads.txt` à la racine du domaine, et vérifier HTTP 200. Le build prépare `deployment/host-root/ads.txt` ; aucun faux identifiant vendeur n'est publié. `/kevuno/ads.txt` seul ne suffit pas.
+6. Publier la ligne AdSense réelle dans `/ads.txt` à la racine du domaine, et vérifier HTTP 200. Le build prépare `deployment/host-root/ads.txt` ; aucun faux identifiant vendeur n'est publié. `/kenuvo/ads.txt` seul ne suffit pas.
 7. Une fois ces points contrôlés, remplir la configuration et brancher l'adaptateur dans `agent-bootstrap.js`. Passer `enabled` à `true` uniquement pour la mise en service validée. Les cases de configuration sont des verrous techniques, pas une certification en elles-mêmes. Tester refus/acceptation/retrait du consentement et l'absence de données de projet dans les requêtes.
 8. Vérifier les conditions de l'hébergeur pour l'usage publicitaire envisagé. Ne pas activer d'Auto Ads dans les zones du simulateur sans revue de l'expérience et de la confidentialité.
 

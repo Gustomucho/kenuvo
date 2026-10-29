@@ -16,7 +16,7 @@ npm run build
 npm run dev
 ```
 
-Ouvrir `http://localhost:4173/kevuno/`. Le serveur de développement sert uniquement `dist/`. Relancer la compilation après chaque modification. Pour une publication à la racine d'un domaine : `BASE_PATH=/ SITE_URL=https://votre-domaine.example npm run build`.
+Ouvrir `http://localhost:4173/kenuvo/`. Le serveur de développement sert uniquement `dist/`. Relancer la compilation après chaque modification. Pour une publication à la racine d'un domaine : `BASE_PATH=/ SITE_URL=https://votre-domaine.example npm run build`.
 
 ## Utilisation pour débutants
 
@@ -50,13 +50,13 @@ Si la confidentialité du moteur de calcul lui-même devient impérative, il fau
 
 ## Publication GitHub Pages
 
-1. Créer `Gustomucho/kevuno` **public**, conformément au choix du propriétaire. Déposer les fichiers sur `main`.
+1. Créer `Gustomucho/kenuvo` **public**, conformément au choix du propriétaire. Déposer les fichiers sur `main`.
 2. GitHub Pages est disponible pour un dépôt public avec GitHub Free. Aucun abonnement payant n’est nécessaire pour cette configuration.
 3. Dans Settings → Pages, choisir **GitHub Actions**. Le workflow `pages.yml` exécute les tests, construit le site et publie uniquement `dist/`.
-4. Vérifier le succès de l'environnement `github-pages`. URL prévue, **non active tant que le déploiement n'est pas confirmé** : `https://gustomucho.github.io/kevuno/`.
+4. Vérifier le succès de l'environnement `github-pages`. URL prévue, **non active tant que le déploiement n'est pas confirmé** : `https://gustomucho.github.io/kenuvo/`.
 5. Les pull requests exécutent les tests mais ne publient pas. Adapter ensemble `BASE_PATH` et `SITE_URL` si le nom du dépôt ou le domaine change.
 
-Le dépôt public `Gustomucho/kevuno` a été créé par son propriétaire. La publication est assurée par le workflow `pages.yml` une fois la source GitHub Pages réglée sur GitHub Actions. Le succès de l’environnement `github-pages` fait foi pour la mise en ligne.
+Le dépôt public `Gustomucho/kenuvo` a été créé par son propriétaire. La publication est assurée par le workflow `pages.yml` une fois la source GitHub Pages réglée sur GitHub Actions. Le succès de l’environnement `github-pages` fait foi pour la mise en ligne.
 
 Avant d'activer une régie publicitaire, vérifier les conditions de GitHub Pages concernant l'exploitation commerciale et celles de la régie. Les scripts de publicité ne sont pas intégrés ; ils demanderaient une configuration, une politique dédiée et un traitement approprié du consentement. Aucune recette publicitaire n'est promise. Le référencement nécessite ensuite des contenus utiles, une indexation et du suivi ; aucune position n'est garantie.
 
@@ -93,9 +93,9 @@ L'autocomplétion comporte un répertoire initial limité de codes postaux. Tout
 
 Textes commerciaux et FAQ en FR/NL/EN, identité JSON-LD, titres et descriptions, canonical/hreflang, sitemap et actifs versionnés. WebMCP expose six outils réels sur les pages du simulateur, dont estimation des travaux, simulation et préremplissage ; les pages éditoriales exposent les outils publics. Voir le [guide SEO, agents et AdSense](docs/SEO_AGENTS_ADSENSE.md) pour les schémas, tests et limites.
 
-AdSense est **désactivé**. Le chargeur et les emplacements sont préparés, sans identifiant inventé, sans CMP prétendue certifiée, et sans script publicitaire chargé. L'inscription, la validation Google, la CMP, la CSP, les mentions et le véritable ads.txt racine restent à finaliser avant toute activation. Un domaine propre est à prévoir pour éviter les limites du chemin `/kevuno/` et renforcer la marque.
+AdSense est **désactivé**. Le chargeur et les emplacements sont préparés, sans identifiant inventé, sans CMP prétendue certifiée, et sans script publicitaire chargé. L'inscription, la validation Google, la CMP, la CSP, les mentions et le véritable ads.txt racine restent à finaliser avant toute activation. Un domaine propre est à prévoir pour éviter les limites du chemin `/kenuvo/` et renforcer la marque.
 
-Le fichier `/kevuno/robots.txt` ne gouverne pas les robots du domaine : ils consultent `/robots.txt` à la racine. Les fichiers destinés au véritable hébergement racine sont préparés dans `deployment/host-root/`. Aucune position dans Google ni compatibilité native avec tous les agents n'est garantie.
+Le fichier `/kenuvo/robots.txt` ne gouverne pas les robots du domaine : ils consultent `/robots.txt` à la racine. Les fichiers destinés au véritable hébergement racine sont préparés dans `deployment/host-root/`. Aucune position dans Google ni compatibilité native avec tous les agents n'est garantie.
 
 ## Domaine et acquisition de visiteurs
 
@@ -106,4 +106,8 @@ Le site propose six parcours de questions, huit guides pratiques de préparation
 
 ### Nom de marque et dépôt
 
-Le service se nomme **Kenuvo**, dans les trois langues et dans les métadonnées SEO et IA. Le dépôt conserve provisoirement son adresse technique `Gustomucho/kevuno` : son renommage en `kenuvo` se fait dans GitHub → Settings → General → Repository name. Le workflow adapte automatiquement l’adresse Pages lors de la publication suivante. La clé de sauvegarde historique `kevuno-project-v1` est conservée pour rendre les projets déjà enregistrés accessibles ; elle ne correspond pas au nom public du service.
+Le service et le dépôt se nomment **Kenuvo** : `Gustomucho/kenuvo`, domaine `kenuvo.be`. La clé de sauvegarde historique `kevuno-project-v1` reste compatible avec les projets déjà enregistrés.
+
+### Gratuité, confidentialité et photographies
+
+Les engagements « Gratuit · Confidentiel · Sans compte » sont affichés dans les trois langues à l’accueil, près du simulateur et dans les guides. La FAQ explique la sauvegarde locale facultative, les journaux techniques de l’hébergeur et le cas d’un assistant IA externe. Aucun envoi de projet ou ajout de traceur. Les trois photos Unsplash sont auto-hébergées, optimisées en WebP, avec deux largeurs, dimensions explicites et textes alternatifs traduits. Les images sous la ligne de flottaison se chargent à la demande. Sources et licence : [crédits photo](assets/photos/CREDITS.md). Mise en page éditoriale asymétrique, mobile sur une colonne, sans carrousel.
