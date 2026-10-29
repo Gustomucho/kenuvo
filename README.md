@@ -114,8 +114,12 @@ Les engagements « Gratuit · Confidentiel · Sans compte » sont affichés dans
 
 ### Navigation, négociation et page légale
 
-Le menu d’ancres donne accès au simulateur, aux avantages, questions, guides et références. Les informations légales, la confidentialité, l’absence de démarche commerciale et les outils IA sont réunis sur `/fr/mentions-legales/`, `/nl/juridisch/` et `/en/legal/`. L’identité publique de l’éditeur reste à renseigner dans `data/publisher.json`.
+Le menu d’ancres donne accès au simulateur, aux avantages, questions, guides et références. Les informations légales, la confidentialité, l’absence de démarche commerciale et les outils IA sont réunis sur `/fr/mentions-legales/`, `/nl/juridisch/` et `/en/legal/`. L’éditeur est Augustin Jacobs. Son nom est dans `data/publisher.json` ; le contact passe par le formulaire Jotform et l’adresse postale reste à préciser.
 
 La jauge et le champ de prix exact actualisent le scénario affiché et les résultats. Le bouton de retour restaure le prix de départ ; aucun prix ni revenu ne passe dans une URL. Les crédits existants sont indiqués hors loyer.
 
 La balise de validation Google attend le véritable jeton Search Console dans `data/seo.json` ou la variable Actions `GOOGLE_SITE_VERIFICATION`. La vérification DNS d’une propriété Domaine reste possible sans balise. Voir [la revue SEO](docs/AUDIT_SEO.md) pour les vérifications et limites réelles.
+
+### Contact de l’éditeur
+
+Le formulaire Jotform est intégré dans les pages légales. Seuls le nom Augustin Jacobs et un lien vers le formulaire sont publics. Aucun e-mail du destinataire n’est publié dans les fichiers du site ou dans le dépôt ; la destination des notifications se règle uniquement dans Jotform. L’iframe se charge au clic, sans envoyer les données de simulation. Aucun envoi par la messagerie locale. Le prestataire stocke les messages selon ses propres conditions ; l’information de confidentialité du contact le précise. Le nom et le lien de formulaire restent disponibles sans JavaScript. L’adresse postale reste à renseigner si applicable.

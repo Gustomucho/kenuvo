@@ -24,7 +24,7 @@ Une balise de vérification ne provoque pas de suivi et n’améliore pas à ell
 
 ## Informations encore nécessaires
 
-`data/publisher.json` doit recevoir les véritables nom/raison sociale, adresse et e-mail publics de l’éditeur, et le numéro d’entreprise si applicable. La page signale les informations manquantes ; aucune conformité juridique complète n’est affirmée.
+`data/publisher.json` renseigne Augustin Jacobs. Le formulaire Jotform sert de contact, sans publier son adresse e-mail. Les notifications se règlent dans le compte du prestataire. La politique de confidentialité indique le traitement des messages par Jotform ; les calculs du simulateur restent locaux. L’adresse postale reste à fournir, ainsi que le numéro d’entreprise si applicable. Aucune conformité juridique complète n’est affirmée.
 
 Le jeton Search Console et l’accès à la propriété Google ne sont pas fournis. Aucune validation ou indexation n’est prétendue acquise. Les positions et le trafic dépendent aussi du contenu, des liens obtenus et du comportement réel des visiteurs. Un audit du code ne constitue pas un score Lighthouse ni une promesse « 10/10 ». Le test visuel dans le navigateur est indisponible dans cet environnement ; aucun résultat Core Web Vitals réel n’est inventé.
 
@@ -35,3 +35,7 @@ Le jeton Search Console et l’accès à la propriété Google ne sont pas fourn
 - https://developers.google.com/search/docs/appearance/site-names
 - https://support.google.com/webmasters/answer/9008080
 - https://economie.fgov.be/fr/themes/line/commerce-electronique/vente-par-internet/site-dentreprise-et-comptes
+
+## Contact via Jotform
+
+Le formulaire public répond en HTTP 200, comporte un CAPTCHA natif et ne contient pas l’adresse e-mail du destinataire dans le HTML inspecté. La vérification complète du destinataire des notifications privées n’est pas disponible avec le connecteur : le propriétaire doit contrôler Settings → Emails → Notification → Recipients dans le constructeur Jotform. Aucun e-mail de test ni soumission n’a été créé. Le formulaire s’ouvre au clic, et aucune donnée de simulation n’est ajoutée à son URL. Les libellés du formulaire sont présentés en trois langues pour éviter un faux sélecteur de langue.
