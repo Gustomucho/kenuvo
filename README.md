@@ -88,3 +88,11 @@ L'autocomplétion comporte un répertoire initial limité de codes postaux. Tout
 `.github/workflows/` : contrôle, publication et revue mensuelle.
 
 © 2026 Kevuno. Tous droits réservés. Aucune licence libre n'est accordée.
+
+## Référencement, IA et publicité future
+
+Textes commerciaux et FAQ en FR/NL/EN, identité JSON-LD, titres et descriptions, canonical/hreflang, sitemap et actifs versionnés. WebMCP expose six outils réels sur les pages du simulateur, dont estimation des travaux, simulation et préremplissage ; les pages éditoriales exposent les outils publics. Voir le [guide SEO, agents et AdSense](docs/SEO_AGENTS_ADSENSE.md) pour les schémas, tests et limites.
+
+AdSense est **désactivé**. Le chargeur et les emplacements sont préparés, sans identifiant inventé, sans CMP prétendue certifiée, et sans script publicitaire chargé. L'inscription, la validation Google, la CMP, la CSP, les mentions et le véritable ads.txt racine restent à finaliser avant toute activation. Un domaine propre est à prévoir pour éviter les limites du chemin `/kevuno/` et renforcer la marque.
+
+Le fichier `/kevuno/robots.txt` ne gouverne pas les robots du domaine : ils consultent `/robots.txt` à la racine. Les fichiers destinés au véritable hébergement racine sont préparés dans `deployment/host-root/`. Aucune position dans Google ni compatibilité native avec tous les agents n'est garantie.

@@ -1,0 +1,10 @@
+{
+  "enabled": false,
+  "clientId": "",
+  "slotId": "",
+  "certifiedCmpIntegrated": false,
+  "siteApproved": false,
+  "adsTxtRootVerified": false,
+  "privacyNoticeReviewed": false,
+  "placement": "editorial-only"
+}

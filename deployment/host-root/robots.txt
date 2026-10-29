@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gustomucho.github.io/kevuno/sitemap.xml
