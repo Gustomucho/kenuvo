@@ -2,7 +2,7 @@
 
 ## Changements vérifiables
 
-- 40 pages indexables : accueil de langue, trois simulateurs, 33 guides et trois pages légales. Une page 404 séparée est en `noindex, follow` et absente du sitemap.
+- 43 pages indexables : accueil de langue, trois accueils localisés, trois questionnaires dédiés, 33 guides et trois pages légales. Une page 404 séparée est en `noindex, follow` et absente du sitemap.
 - Titres uniques sans duplication « Kenuvo | Kenuvo », descriptions propres, une seule H1, balises sémantiques, liens internes explorables sans JavaScript.
 - Canonical HTTPS, hreflang réciproques pour les langues et pages légales aux URL traduites. Les traductions de guides gardent le même slug dans chaque langue.
 - Sitemap XML avec alternatives de langue et robots.txt à la racine du domaine configuré. Pas de règle qui bloque les guides, images ou modules du simulateur.
@@ -39,3 +39,9 @@ Le jeton Search Console et l’accès à la propriété Google ne sont pas fourn
 ## Contact via Jotform
 
 Le formulaire public répond en HTTP 200, comporte un CAPTCHA natif et ne contient pas l’adresse e-mail du destinataire dans le HTML inspecté. La vérification complète du destinataire des notifications privées n’est pas disponible avec le connecteur : le propriétaire doit contrôler Settings → Emails → Notification → Recipients dans le constructeur Jotform. Aucun e-mail de test ni soumission n’a été créé. Le formulaire s’ouvre au clic, et aucune donnée de simulation n’est ajoutée à son URL. Les libellés du formulaire sont présentés en trois langues pour éviter un faux sélecteur de langue.
+
+## Parcours dédié
+
+Les trois questionnaires ont leurs propres URL, titres, descriptions, canonical, hreflang et entrées dans le sitemap. La page d’accueil conserve le texte éditorial et ses guides ; elle ne charge plus le module du questionnaire. Les liens d’action mènent directement au parcours. Les réponses restent en mémoire et ne sont pas incluses dans les URL. Le paramètre public `example=1` ne transporte aucune donnée personnelle et ouvre un exemple fictif clairement identifié.
+
+Validation du parcours : 48 tests automatisés et essais du DOM simulé sur les parcours logement connu, budget sans bien identifié et location. Les essais couvrent la navigation, le bilan uniquement à la fin, la jauge sans recréer son élément, le changement de langue en mémoire, la sauvegarde/relecture explicite et le financement bullet. Ces essais ne constituent pas une vérification visuelle dans un navigateur.

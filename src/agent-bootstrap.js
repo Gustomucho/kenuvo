@@ -6,3 +6,5 @@ if(node&&identity){const reference=JSON.parse(node.textContent),config=JSON.pars
 const ad=document.querySelector('#ad-config');if(ad)initializeAdvertising({config:JSON.parse(ad.textContent),document,window});
 
 initializeContact({document});
+
+const motion=document.querySelector('[data-motion]');if(motion)motion.onchange=event=>document.documentElement.classList.toggle('reduce-motion',event.target.checked);

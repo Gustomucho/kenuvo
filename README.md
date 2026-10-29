@@ -123,3 +123,13 @@ La balise de validation Google attend le véritable jeton Search Console dans `d
 ### Contact de l’éditeur
 
 Le formulaire Jotform est intégré dans les pages légales. Seuls le nom Augustin Jacobs et un lien vers le formulaire sont publics. Aucun e-mail du destinataire n’est publié dans les fichiers du site ou dans le dépôt ; la destination des notifications se règle uniquement dans Jotform. L’iframe se charge au clic, sans envoyer les données de simulation. Aucun envoi par la messagerie locale. Le prestataire stocke les messages selon ses propres conditions ; l’information de confidentialité du contact le précise. Le nom et le lien de formulaire restent disponibles sans JavaScript. L’adresse postale reste à renseigner si applicable.
+
+### Questionnaire guidé
+
+Le simulateur vit désormais sur `/fr/simulateur/`, `/nl/simulator/` et `/en/calculator/`. L’accueil et les guides restent publics et leurs liens mènent au parcours dédié. Une question à la fois, choix en cartes, progression en quatre groupes, retour et modification des réponses, sans passage automatique. Les questions s’adaptent au logement connu ou à la recherche de budget, aux travaux et au projet locatif.
+
+Sans logement identifié, le moteur calcule un plafond compatible et utilise ce prix comme scénario explicitement hypothétique. Aucun prix d’annonce, commune ou surface n’est inventé. Si aucun budget n’est possible, aucun prix fictif de 1 € n’est affiché. Les réductions fiscales restent soumises à une confirmation explicite. Les hypothèses proposées sont visibles et modifiables.
+
+Le bilan complet apparaît à la fin : coût, apport, mensualités, prix limite et jauge de négociation. Les réglages avancés conservent le bullet dix ans, les charges et les frais. Le comparateur de variantes, l’impression et les sauvegardes facultatives restent disponibles. Les anciens fichiers de projet restent lisibles ; les nouveaux incluent les choix du parcours pour conserver le sens d’un budget sans bien identifié.
+
+Les six outils WebMCP du formulaire sont disponibles uniquement sur les pages dédiées. Les autres pages exposent les outils publics sans préremplissage. Les adresses canoniques, hreflang, sitemap et liens dans les guides prennent en compte les nouvelles pages.
