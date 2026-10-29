@@ -18,6 +18,12 @@ npm run dev
 
 Ouvrir `http://localhost:4173/kevuno/`. Le serveur de développement sert uniquement `dist/`. Relancer la compilation après chaque modification. Pour une publication à la racine d'un domaine : `BASE_PATH=/ SITE_URL=https://votre-domaine.example npm run build`.
 
+## Utilisation pour débutants
+
+Les champs sont formulés comme des questions, avec une aide sous les montants importants. Les réglages fiscaux détaillés, frais, limites bancaires et bullet restent accessibles dans des options facultatives.
+
+Le panneau de résultat traite d’abord le logement **au prix demandé** : coût total, argent personnel nécessaire et paiement mensuel. Il compare ce résultat à l’épargne et à la limite mensuelle de l’utilisateur, explique les écarts, puis présente séparément un éventuel **prix à négocier**. Ce dernier n’est pas une expertise de marché. La mensualité affichée correspond à l’épargne actuelle, pas à un apport supplémentaire hypothétique.
+
 ## Fonctionnement
 
 - Parcours en cinq étapes : bien, travaux, moyens, banque, décision.
