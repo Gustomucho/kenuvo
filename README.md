@@ -111,3 +111,11 @@ Le service et le dépôt se nomment **Kenuvo** : `Gustomucho/kenuvo`, domaine `k
 ### Gratuité, confidentialité et photographies
 
 Les engagements « Gratuit · Confidentiel · Sans compte » sont affichés dans les trois langues à l’accueil, près du simulateur et dans les guides. La FAQ explique la sauvegarde locale facultative, les journaux techniques de l’hébergeur et le cas d’un assistant IA externe. Aucun envoi de projet ou ajout de traceur. Les trois photos Unsplash sont auto-hébergées, optimisées en WebP, avec deux largeurs, dimensions explicites et textes alternatifs traduits. Les images sous la ligne de flottaison se chargent à la demande. Sources et licence : [crédits photo](assets/photos/CREDITS.md). Mise en page éditoriale asymétrique, mobile sur une colonne, sans carrousel.
+
+### Navigation, négociation et page légale
+
+Le menu d’ancres donne accès au simulateur, aux avantages, questions, guides et références. Les informations légales, la confidentialité, l’absence de démarche commerciale et les outils IA sont réunis sur `/fr/mentions-legales/`, `/nl/juridisch/` et `/en/legal/`. L’identité publique de l’éditeur reste à renseigner dans `data/publisher.json`.
+
+La jauge et le champ de prix exact actualisent le scénario affiché et les résultats. Le bouton de retour restaure le prix de départ ; aucun prix ni revenu ne passe dans une URL. Les crédits existants sont indiqués hors loyer.
+
+La balise de validation Google attend le véritable jeton Search Console dans `data/seo.json` ou la variable Actions `GOOGLE_SITE_VERIFICATION`. La vérification DNS d’une propriété Domaine reste possible sans balise. Voir [la revue SEO](docs/AUDIT_SEO.md) pour les vérifications et limites réelles.
