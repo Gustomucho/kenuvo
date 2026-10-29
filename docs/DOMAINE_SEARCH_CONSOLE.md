@@ -1,6 +1,6 @@
 # Raccorder kenuvo.be et connecter Google
 
-Domaine communiqué par le propriétaire : **kenuvo.be**. Le nom du service reste **Kevuno**. Les deux orthographes sont différentes ; cette documentation utilise exactement le domaine acheté, sans supposer la possession de kevuno.be.
+Domaine communiqué par le propriétaire : **kenuvo.be**. Le service se nomme **Kenuvo**, conformément au domaine acheté. Le dépôt conserve son adresse technique historique tant que son renommage dans les réglages GitHub n’est pas effectué.
 
 ## État constaté le 29 octobre 2026
 
@@ -28,7 +28,7 @@ Ouvrir le dépôt Gustomucho/kevuno → Settings → Pages → Custom domain →
 
 Attendre la validation DNS et le certificat, puis activer **Enforce HTTPS** quand l'option devient disponible. La propagation peut demander du temps ; ne pas effacer puis recréer les réglages en boucle. GitHub recommande de vérifier aussi la propriété du domaine dans les réglages Pages du compte, avec le TXT `_github-pages-challenge-Gustomucho` qu'il fournit. Garder ce TXT ensuite.
 
-Le workflow de publication lit désormais l'URL réellement configurée par GitHub Pages avec `actions/configure-pages@v5`. Une fois le domaine saisi, relancer le workflow Test and deploy Kevuno → Run workflow. Le build utilisera `https://kenuvo.be` et `/`, sans modification manuelle des fichiers. Avant cette configuration, il conserve l'adresse GitHub Pages actuelle.
+Le workflow de publication lit désormais l'URL réellement configurée par GitHub Pages avec `actions/configure-pages@v5`. Une fois le domaine saisi, relancer le workflow Test and deploy Kenuvo → Run workflow. Le build utilisera `https://kenuvo.be` et `/`, sans modification manuelle des fichiers. Avant cette configuration, il conserve l'adresse GitHub Pages actuelle.
 
 Contrôler après publication :
 

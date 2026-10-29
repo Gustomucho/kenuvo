@@ -1,4 +1,4 @@
-name: Test and deploy Kevuno
+name: Test and deploy Kenuvo
 on:
   push:
     branches: [main]

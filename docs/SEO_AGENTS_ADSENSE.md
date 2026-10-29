@@ -4,9 +4,9 @@
 
 Le contenu commercial décrit des bénéfices vérifiables : comprendre le coût complet, préparer une offre adaptée à ses moyens et préparer une discussion avec sa banque. Il ne promet ni économie garantie, ni prêt accepté, ni expertise de marché. FR, NL et EN disposent de textes propres, visibles dans le HTML initial : pas de mots clés cachés ni de texte réservé aux robots.
 
-Les titres et descriptions associent Kevuno à l'achat immobilier en Belgique, au budget, à l'apport, aux frais, à la rénovation et au crédit hypothécaire. Les guides, questions-réponses et liens internes complètent ces thèmes. Aucune position Google ni citation par une IA n'est garantie.
+Les titres et descriptions associent Kenuvo à l'achat immobilier en Belgique, au budget, à l'apport, aux frais, à la rénovation et au crédit hypothécaire. Les guides, questions-réponses et liens internes complètent ces thèmes. Aucune position Google ni citation par une IA n'est garantie.
 
-JSON-LD lie les identités `Organization`, `Brand`, `WebSite`, `WebApplication` et la page ou l'article, avec identifiants stables, nom Kevuno, logo et zone Belgique. `Organization` représente ici le projet éditeur ; aucun statut juridique, adresse, numéro d'entreprise, contact, agrément financier, avis client ou réseau social n'est inventé. La FAQ balisée reprend exactement les réponses visibles. Aucun résultat enrichi FAQ n'est promis : Google limite leur affichage.
+JSON-LD lie les identités `Organization`, `Brand`, `WebSite`, `WebApplication` et la page ou l'article, avec identifiants stables, nom Kenuvo, logo et zone Belgique. `Organization` représente ici le projet éditeur ; aucun statut juridique, adresse, numéro d'entreprise, contact, agrément financier, avis client ou réseau social n'est inventé. La FAQ balisée reprend exactement les réponses visibles. Aucun résultat enrichi FAQ n'est promis : Google limite leur affichage.
 
 Canonical, hreflang FR/NL/EN, x-default, Open Graph, nom de marque, langue, sitemap incluant l'accueil et meta robots sont générés. Les actifs et imports de modules sont versionnés pour éviter de mélanger ancien et nouveau code après publication.
 
@@ -16,7 +16,7 @@ Adresse actuelle : `https://gustomucho.github.io/kevuno/`.
 
 Les robots ne consultent que `https://gustomucho.github.io/robots.txt`, pas `/kevuno/robots.txt`. La copie produite sous le projet ne doit donc pas être présentée comme un contrôle effectif du domaine. `deployment/host-root/robots.txt` est préparé pour le véritable hébergement racine. Il autorise l'exploration et indique le sitemap. Une réponse 404 au robots racine ne bloque pas par elle-même l'exploration, mais il faut vérifier le robots réel en cas de changement d'hébergement.
 
-Google ne prend pas en charge un nom de site distinct au niveau d'un sous-dossier. Le balisage renforce l'identité de Kevuno, mais ne résout pas cette limite d'affichage de Google. Pour une marque durable et AdSense, utiliser un domaine propre dont la racine est maîtrisée. Aucun autre dépôt ou site existant de Gustomucho n'est modifié ici.
+Google ne prend pas en charge un nom de site distinct au niveau d'un sous-dossier. Le balisage renforce l'identité de Kenuvo, mais ne résout pas cette limite d'affichage de Google. Pour une marque durable et AdSense, utiliser un domaine propre dont la racine est maîtrisée. Aucun autre dépôt ou site existant de Gustomucho n'est modifié ici.
 
 Pour un domaine futur, adapter ensemble `SITE_URL` et `BASE_PATH=/` dans le workflow Pages, puis configurer le DNS et le domaine dans Pages. Vérifier canonical, hreflang, sitemap, robots racine et redirections après bascule. Ne pas copier un domaine fictif en production. Soumettre ensuite le sitemap dans Google Search Console avec un compte propriétaire ; aucune propriété Search Console n'a été créée dans cette tâche.
 
@@ -24,14 +24,14 @@ Pour un domaine futur, adapter ensemble `SITE_URL` et `BASE_PATH=/` dans le work
 
 Entrée principale : `document.modelContext.registerTool()`. `navigator.modelContext` sert uniquement de compatibilité si l'API document est absente. Une erreur de l'API principale ne provoque pas une seconde inscription dans l'ancienne API. Chaque promesse de registration est traitée ; l'AbortSignal permet de retirer les outils. Il n'y a ni polyfill de détection, ni formulaire `toolname` servant de faux support.
 
-- `get_kevuno_info` : identité et fonctions publiques.
+- `get_kenuvo_info` : identité et fonctions publiques.
 - `get_reference_data` : sources et dates publiques.
 - `estimate_renovation` : estimation sur une surface et des paramètres fournis.
 - `simulate_purchase` : simulation explicite avec les mêmes fonctions financières que l'interface ; aucun accès au projet affiché.
 - `fill_simulator` : préremplissage en mémoire de champs explicitement fournis, sur les pages du simulateur ; validation et modification possibles par l'utilisateur.
 - `navigate_calculator` : affichage d'une étape, sans changement des montants.
 
-Aucun outil ne lit une sauvegarde, ne révèle les anciens montants, n'enregistre, n'efface, n'exporte un projet, n'active les annonces ni ne contacte une banque. Les annotations distinguent lecture et modification du formulaire. Les entrées sont validées, les erreurs retournées sous forme structurée, les sorties financières portent leurs unités et limites. L'agent ne doit utiliser les chiffres qu'avec l'autorisation de l'utilisateur. Un fournisseur d'assistant peut traiter les données qui lui sont confiées : la promesse de calcul local par Kevuno ne signifie pas que tout assistant reste local.
+Aucun outil ne lit une sauvegarde, ne révèle les anciens montants, n'enregistre, n'efface, n'exporte un projet, n'active les annonces ni ne contacte une banque. Les annotations distinguent lecture et modification du formulaire. Les entrées sont validées, les erreurs retournées sous forme structurée, les sorties financières portent leurs unités et limites. L'agent ne doit utiliser les chiffres qu'avec l'autorisation de l'utilisateur. Un fournisseur d'assistant peut traiter les données qui lui sont confiées : la promesse de calcul local par Kenuvo ne signifie pas que tout assistant reste local.
 
 `/ai-tools.json` décrit les outils et schémas. `/agents.md` donne les unités, étapes et limites. Ces documents sont informatifs ; ils ne remplacent ni WebMCP natif ni robots.txt et ne constituent pas un serveur MCP distant. Les pages éditoriales enregistrent les outils publics ; le préremplissage et la navigation ne sont enregistrés que sur le simulateur. Les navigateurs sans WebMCP conservent tout le fonctionnement normal.
 
@@ -45,7 +45,7 @@ Le chargeur `src/advertising.js` est prêt à intégrer un identifiant réel et 
 
 Pour activer plus tard :
 
-1. Disposer d'un domaine admissible, idéalement un domaine propre à Kevuno. L'URL d'inscription AdSense ne doit pas contenir de chemin tel que `/kevuno/`. Aucune admissibilité automatique de GitHub Pages ou approbation Google n'est affirmée.
+1. Disposer d'un domaine admissible, idéalement un domaine propre à Kenuvo. L'URL d'inscription AdSense ne doit pas contenir de chemin tel que `/kevuno/`. Aucune admissibilité automatique de GitHub Pages ou approbation Google n'est affirmée.
 2. Créer le compte AdSense et faire valider le site ; récupérer le véritable identifiant `ca-pub-...` et un emplacement. Pour la vérification avant diffusion, utiliser la méthode fournie par Google sans activer les annonces prématurément.
 3. Intégrer une CMP certifiée Google adaptée au trafic belge/EEE, selon les règles alors applicables. Créer son adaptateur `requestAdPermission()` à partir du résultat réel du consentement, en prenant en compte refus, retrait, personnalisation et signaux requis. Ne pas remplacer la CMP par un simple bouton “J'accepte” ou une constante `true`.
 4. Compléter les mentions d'éditeur et la politique de confidentialité/cookies. Revoir les promesses actuelles d'absence de traceurs et les traitements des fournisseurs avant activation.

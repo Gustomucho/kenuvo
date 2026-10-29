@@ -1,4 +1,4 @@
-# Kevuno
+# Kenuvo
 
 **FR — Votre logement. Votre budget. Votre financement.**  
 **NL — Jouw woning. Jouw budget. Jouw financiering.**  
@@ -87,7 +87,7 @@ L'autocomplétion comporte un répertoire initial limité de codes postaux. Tout
 `tests/` : vérifications indépendantes des calculs et de la génération.  
 `.github/workflows/` : contrôle, publication et revue mensuelle.
 
-© 2026 Kevuno. Tous droits réservés. Aucune licence libre n'est accordée.
+© 2026 Kenuvo. Tous droits réservés. Aucune licence libre n'est accordée.
 
 ## Référencement, IA et publicité future
 
@@ -99,6 +99,11 @@ Le fichier `/kevuno/robots.txt` ne gouverne pas les robots du domaine : ils cons
 
 ## Domaine et acquisition de visiteurs
 
-Domaine acheté communiqué par le propriétaire : **kenuvo.be** (la marque reste Kevuno). Le [guide Name.com, GitHub Pages et Search Console](docs/DOMAINE_SEARCH_CONSOLE.md) donne les enregistrements DNS exacts et les étapes de validation. Le workflow détecte maintenant l'adresse configurée dans GitHub Pages et adapte automatiquement les chemins, canonical, hreflang, sitemap et robots lors d'une nouvelle publication.
+Domaine acheté communiqué par le propriétaire : **kenuvo.be** (marque **Kenuvo**). Le [guide Name.com, GitHub Pages et Search Console](docs/DOMAINE_SEARCH_CONSOLE.md) donne les enregistrements DNS exacts et les étapes de validation. Le workflow détecte maintenant l'adresse configurée dans GitHub Pages et adapte automatiquement les chemins, canonical, hreflang, sitemap et robots lors d'une nouvelle publication.
 
 Le site propose six parcours de questions, huit guides pratiques de préparation à l'achat en trois langues (dont trois guides de frais régionaux), des exemples chiffrés produits par les fonctions financières du simulateur et des liens vers les étapes appropriées. Les articles existants restent accessibles. Les pages sont statiques, indexables et reliées entre elles. Aucun volume de recherche, gain de trafic ou position Google n'est promis. Les exemples de financement ne constituent ni une offre ni une évaluation immobilière.
+
+
+### Nom de marque et dépôt
+
+Le service se nomme **Kenuvo**, dans les trois langues et dans les métadonnées SEO et IA. Le dépôt conserve provisoirement son adresse technique `Gustomucho/kevuno` : son renommage en `kenuvo` se fait dans GitHub → Settings → General → Repository name. Le workflow adapte automatiquement l’adresse Pages lors de la publication suivante. La clé de sauvegarde historique `kevuno-project-v1` est conservée pour rendre les projets déjà enregistrés accessibles ; elle ne correspond pas au nom public du service.

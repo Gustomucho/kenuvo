@@ -6,8 +6,8 @@ export async function initializeAdvertising({config,consentAdapter,document:doc,
  if(typeof consentAdapter?.requestAdPermission!=='function')return {loaded:false,blockers:['cmp_adapter_missing']};
  if(doc.querySelector('#calculator')||!doc.querySelector('[data-ad-placement="editorial"]'))return {loaded:false,blockers:['no_editorial_slot']};
  const permission=await consentAdapter.requestAdPermission();if(permission?.allowed!==true)return {loaded:false,blockers:['no_ad_permission']};
- if(doc.querySelector('script[data-kevuno-adsense]'))return {loaded:true,alreadyLoaded:true};
+ if(doc.querySelector('script[data-kenuvo-adsense]'))return {loaded:true,alreadyLoaded:true};
  const slot=doc.querySelector('[data-ad-placement="editorial"]'),ad=doc.createElement('ins');ad.className='adsbygoogle';ad.style.display='block';ad.dataset.adClient=config.clientId;ad.dataset.adSlot=config.slotId;ad.dataset.adFormat='auto';ad.dataset.fullWidthResponsive='true';slot.replaceChildren(ad);
- const script=doc.createElement('script');script.async=true;script.crossOrigin='anonymous';script.dataset.kevunoAdsense='true';script.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+encodeURIComponent(config.clientId);
+ const script=doc.createElement('script');script.async=true;script.crossOrigin='anonymous';script.dataset.kenuvoAdsense='true';script.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+encodeURIComponent(config.clientId);
  script.onload=()=>{(win.adsbygoogle=win.adsbygoogle||[]).push({});};doc.head.append(script);return {loaded:true};
 }
