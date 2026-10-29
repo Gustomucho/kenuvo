@@ -96,3 +96,9 @@ Textes commerciaux et FAQ en FR/NL/EN, identité JSON-LD, titres et descriptions
 AdSense est **désactivé**. Le chargeur et les emplacements sont préparés, sans identifiant inventé, sans CMP prétendue certifiée, et sans script publicitaire chargé. L'inscription, la validation Google, la CMP, la CSP, les mentions et le véritable ads.txt racine restent à finaliser avant toute activation. Un domaine propre est à prévoir pour éviter les limites du chemin `/kevuno/` et renforcer la marque.
 
 Le fichier `/kevuno/robots.txt` ne gouverne pas les robots du domaine : ils consultent `/robots.txt` à la racine. Les fichiers destinés au véritable hébergement racine sont préparés dans `deployment/host-root/`. Aucune position dans Google ni compatibilité native avec tous les agents n'est garantie.
+
+## Domaine et acquisition de visiteurs
+
+Domaine acheté communiqué par le propriétaire : **kenuvo.be** (la marque reste Kevuno). Le [guide Name.com, GitHub Pages et Search Console](docs/DOMAINE_SEARCH_CONSOLE.md) donne les enregistrements DNS exacts et les étapes de validation. Le workflow détecte maintenant l'adresse configurée dans GitHub Pages et adapte automatiquement les chemins, canonical, hreflang, sitemap et robots lors d'une nouvelle publication.
+
+Le site propose six parcours de questions, huit guides pratiques de préparation à l'achat en trois langues (dont trois guides de frais régionaux), des exemples chiffrés produits par les fonctions financières du simulateur et des liens vers les étapes appropriées. Les articles existants restent accessibles. Les pages sont statiques, indexables et reliées entre elles. Aucun volume de recherche, gain de trafic ou position Google n'est promis. Les exemples de financement ne constituent ni une offre ni une évaluation immobilière.
