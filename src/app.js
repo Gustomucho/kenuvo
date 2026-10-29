@@ -51,6 +51,7 @@ async function changeLanguage(url,push){try{const target=new URL(url,location.hr
 window.addEventListener('popstate',()=>changeLanguage(location.href,false));
 const entrySteps={budget:2,travaux:1,bilan:0};if(Object.hasOwn(entrySteps,location.hash.slice(1)))step=entrySteps[location.hash.slice(1)];
 render();globals();
+if(Object.hasOwn(entrySteps,location.hash.slice(1)))requestAnimationFrame(()=>document.querySelector('#calculator').scrollIntoView({behavior:'instant'}));
 
 // An agent may calculate its own supplied scenario or prefill explicitly requested fields.
 // It cannot read backups, save projects, enable advertising or contact a bank.
